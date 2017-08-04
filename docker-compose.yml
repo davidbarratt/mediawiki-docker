@@ -6,6 +6,8 @@ services:
       - 8888:80
     links:
       - db
+    volumes:
+      - images:/var/www/html/images
   db:
     image: mariadb
     environment:
@@ -17,3 +19,4 @@ services:
       - database:/var/lib/mysql
 volumes:
   database:
+  images:
